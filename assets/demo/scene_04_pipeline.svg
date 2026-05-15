@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <rect width="100%" height="100%" fill="#0c1324"/>
+
+  <!-- 2x2 Grid of Terminal Mini-Windows -->
+  <g transform="translate(160, 120)">
+
+    <!-- Window 1: Trim -->
+    <g transform="translate(0, 0)">
+      <rect width="780" height="380" rx="8" fill="#0f172a" stroke="#3d494c" stroke-width="1.5"/>
+      <rect width="780" height="36" rx="8" fill="#151b2d"/>
+      <rect x="0" y="28" width="780" height="8" fill="#151b2d"/>
+      <circle cx="16" cy="18" r="5" fill="#ffb4ab"/>
+      <circle cx="32" cy="18" r="5" fill="#e1e0ff"/>
+      <circle cx="48" cy="18" r="5" fill="#4edea3"/>
+      <text x="390" y="22" fill="#869397" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">smart_trim.js</text>
+
+      <g transform="translate(16, 60)" font-family="ui-monospace, monospace" font-size="14">
+        <text x="0" y="0" fill="#4cd7f6">
+          <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.1s" fill="freeze"/>
+          $ node scripts/smart_trim.js raw.mp4 00:01:30 10 feature.mp4
+        </text>
+        <text x="0" y="24" fill="#8a9aa8">
+          <animate attributeName="opacity" from="0" to="1" begin="1.0s" dur="0.1s" fill="freeze"/>
+          [AssetFlow] Trimming 10s segment...
+        </text>
+        <text x="0" y="48" fill="#4edea3" font-weight="700">
+          <animate attributeName="opacity" from="0" to="1" begin="2.0s" dur="0.2s" fill="freeze"/>
+          ✅ SUCCESS: Video trimmed perfectly.
+        </text>
+      </g>
+
+      <!-- Green overlay on completion -->
+      <rect width="780" height="380" rx="8" fill="#4edea3" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.1" begin="2.0s" dur="0.3s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- Window 2: Normalize -->
+    <g transform="translate(820, 0)">
+      <rect width="780" height="380" rx="8" fill="#0f172a" stroke="#3d494c" stroke-width="1.5"/>
+      <rect width="780" height="36" rx="8" fill="#151b2d"/>
+      <rect x="0" y="28" width="780" height="8" fill="#151b2d"/>
+      <circle cx="16" cy="18" r="5" fill="#ffb4ab"/>
+      <circle cx="32" cy="18" r="5" fill="#e1e0ff"/>
+      <circle cx="48" cy="18" r="5" fill="#4edea3"/>
+      <text x="390" y="22" fill="#869397" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">normalize_video.js</text>
+
+      <g transform="translate(16, 60)" font-family="ui-monospace, monospace" font-size="14">
+        <text x="0" y="0" fill="#4cd7f6">
+          <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.1s" fill="freeze"/>
+          $ node scripts/normalize_video.js feature.mp4 feature_final.mp4
+        </text>
+        <text x="0" y="24" fill="#8a9aa8">
+          <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.1s" fill="freeze"/>
+          [AssetFlow] Normalizing to 1080p60...
+        </text>
+        <text x="0" y="48" fill="#4edea3" font-weight="700">
+          <animate attributeName="opacity" from="0" to="1" begin="2.5s" dur="0.2s" fill="freeze"/>
+          ✅ SUCCESS: Video normalized.
+        </text>
+      </g>
+
+      <rect width="780" height="380" rx="8" fill="#4edea3" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.1" begin="2.5s" dur="0.3s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- Window 3: Generate Image -->
+    <g transform="translate(0, 420)">
+      <rect width="780" height="380" rx="8" fill="#0f172a" stroke="#3d494c" stroke-width="1.5"/>
+      <rect width="780" height="36" rx="8" fill="#151b2d"/>
+      <rect x="0" y="28" width="780" height="8" fill="#151b2d"/>
+      <circle cx="16" cy="18" r="5" fill="#ffb4ab"/>
+      <circle cx="32" cy="18" r="5" fill="#e1e0ff"/>
+      <circle cx="48" cy="18" r="5" fill="#4edea3"/>
+      <text x="390" y="22" fill="#869397" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">generate_ideogram.js</text>
+
+      <g transform="translate(16, 60)" font-family="ui-monospace, monospace" font-size="14">
+        <text x="0" y="0" fill="#4cd7f6">
+          <animate attributeName="opacity" from="0" to="1" begin="0.6s" dur="0.1s" fill="freeze"/>
+          $ node scripts/generate_ideogram.js "neon cyberpunk skyline" bg_1.png
+        </text>
+        <text x="0" y="24" fill="#8a9aa8">
+          <animate attributeName="opacity" from="0" to="1" begin="1.4s" dur="0.1s" fill="freeze"/>
+          [AssetFlow] Generating image with Ideogram...
+        </text>
+        <text x="0" y="48" fill="#4edea3" font-weight="700">
+          <animate attributeName="opacity" from="0" to="1" begin="3.0s" dur="0.2s" fill="freeze"/>
+          ✅ SUCCESS: Image generated.
+        </text>
+      </g>
+
+      <rect width="780" height="380" rx="8" fill="#4edea3" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.1" begin="3.0s" dur="0.3s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- Window 4: Measure -->
+    <g transform="translate(820, 420)">
+      <rect width="780" height="380" rx="8" fill="#0f172a" stroke="#3d494c" stroke-width="1.5"/>
+      <rect width="780" height="36" rx="8" fill="#151b2d"/>
+      <rect x="0" y="28" width="780" height="8" fill="#151b2d"/>
+      <circle cx="16" cy="18" r="5" fill="#ffb4ab"/>
+      <circle cx="32" cy="18" r="5" fill="#e1e0ff"/>
+      <circle cx="48" cy="18" r="5" fill="#4edea3"/>
+      <text x="390" y="22" fill="#869397" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">get_media_duration.js</text>
+
+      <g transform="translate(16, 60)" font-family="ui-monospace, monospace" font-size="14">
+        <text x="0" y="0" fill="#4cd7f6">
+          <animate attributeName="opacity" from="0" to="1" begin="0.8s" dur="0.1s" fill="freeze"/>
+          $ node scripts/get_media_duration.js feature_final.mp4
+        </text>
+        <text x="0" y="24" fill="#8a9aa8">
+          <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.1s" fill="freeze"/>
+          [AssetFlow] Probing media file...
+        </text>
+        <text x="0" y="48" fill="#4cd7f6" font-weight="800" font-size="20">
+          <animate attributeName="opacity" from="0" to="1" begin="3.5s" dur="0.2s" fill="freeze"/>
+          10.00
+        </text>
+        <text x="0" y="72" fill="#4edea3" font-weight="700">
+          <animate attributeName="opacity" from="0" to="1" begin="3.8s" dur="0.2s" fill="freeze"/>
+          ✅ DURATION CONFIRMED
+        </text>
+      </g>
+
+      <rect width="780" height="380" rx="8" fill="#4edea3" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.1" begin="3.5s" dur="0.3s" fill="freeze"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- Timeline diagram (appears at end) -->
+  <g transform="translate(960, 980)" text-anchor="middle" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="4.2s" dur="0.5s" fill="freeze"/>
+    <text x="0" y="0" fill="#8a9aa8" font-family="ui-monospace, monospace" font-size="16">
+      Timeline: Intro 5.23s → Demo 10.00s → Outro 4.10s = 19.33s total
+    </text>
+  </g>
+</svg>

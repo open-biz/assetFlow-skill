@@ -1,372 +1,437 @@
-# AssetFlow Launch Demo — Video Script & Storyboard
+# AssetFlow Launch Demo — Pure Action Shot Storyboard
 
-> **Duration:** 60–90 seconds  
+> **Duration:** 45–60 seconds  
 > **Format:** Hyperframes composition (programmatic video)  
 > **Target:** HeyGen Hackathon judges & developer community  
-> **Tone:** Fast-paced, technical, agent-first
+> **Tone:** Fast-paced, kinetic typography, terminal-driven  
+> **Audio:** Instrumental only — no voiceover, no avatar
 
 ---
 
-## 🎬 Overview
+## 🎬 Philosophy
 
-This video demonstrates AssetFlow as the missing link between AI agents and programmatic video. It shows a developer (or AI agent) using AssetFlow CLI commands to generate assets, then seamlessly injecting them into a Hyperframes composition — all without hallucinated paths or broken timelines.
+No talking heads. No voiceovers. The product speaks through its own terminal output. Every scene is either:
+- **SVG animation** (typing text, pulsing grids, code blocks)
+- **Screen recording** (actual AssetFlow CLI executing)
+- **Kinetic typography** (terminal characters flying across screen)
+
+The music and sound design carry the emotional arc.
 
 ---
 
-## 🏗️ Composition Structure (Hyperframes Blocks)
+## 🏗️ Composition Structure
 
 ```text
-Timeline:
-├── 00:00.000 - 00:05.000  →  HOOK: Cover card + title drop
-├── 00:05.000 - 00:12.000  →  PROBLEM: Split-screen chaos (broken paths, wrong durations)
-├── 00:12.000 - 00:28.000  →  SOLUTION: Terminal demo (live command execution)
-├── 00:28.000 - 00:38.000  →  AGENT WORKFLOW: Full pipeline in action
-├── 00:38.000 - 00:48.000  →  HYPERFRAMES INJECTION: HTML composition render
-├── 00:48.000 - 00:58.000  →  SHOWCASE UI: Browse, copy, paste
-├── 00:58.000 - 01:05.000  →  CTA: Install command + GitHub repo
-└── 01:05.000 - 01:08.000  →  END CARD: Logo + tagline
+Timeline (all durations in seconds):
+├── 00:00.0 - 00:04.0  →  BEAT 1: Logo crash + grid reveal
+├── 00:04.0 - 00:08.0  →  BEAT 2: Problem statement (glitch)
+├── 00:08.0 - 00:18.0  →  BEAT 3: Terminal origin story (typing)
+├── 00:18.0 - 00:28.0  →  BEAT 4: Pipeline montage (rapid fire)
+├── 00:28.0 - 00:38.0  →  BEAT 5: HTML injection (code → render)
+├── 00:38.0 - 00:45.0  →  BEAT 6: Showcase UI scroll
+├── 00:45.0 - 00:52.0  →  BEAT 7: Install command (one-liner)
+└── 00:52.0 - 00:55.0  →  BEAT 8: Logo lockup
 ```
 
 ---
 
-## 🎨 Visual Assets Needed
+## 🎨 SVG Asset Inventory
 
-| Asset ID | Type | Source | Notes |
-|---|---|---|---|
-| `cover_card` | SVG/Image | `assetflow_cover.svg` | Full-bleed background, slow zoom |
-| `terminal_window` | Screen recording | Terminal capture | Styled with dark theme, cyan accents |
-| `avatar_intro` | HeyGen video | `scripts/generate_avatar.js` | "Meet AssetFlow" — 5s |
-| `demo_pipeline` | Screen recording | Terminal + browser split | Showing commands + file outputs |
-| `hyperframes_render` | Screen recording | Browser | Hyperframes player rendering composition |
-| `ui_gallery` | Screen recording | `assetflow-ui` | Dark-themed gallery with copy buttons |
-| `install_command` | Text overlay | Animated typing | `curl -sSL ... \| bash` |
+All assets are generated as SVG for crisp scaling in Hyperframes.
+
+| File | Scene | Description |
+|---|---|---|
+| `assets/demo/scene_01_cover.svg` | BEAT 1 | `assetflow_cover.svg` with animated grid pulse |
+| `assets/demo/scene_02_glitch.svg` | BEAT 2 | Glitch text: "HALLUCINATED PATHS" |
+| `assets/demo/scene_03_terminal.svg` | BEAT 3 | Terminal window with typing animation frames |
+| `assets/demo/scene_04_pipeline.svg` | BEAT 4 | 4-up command grid (trim, normalize, generate, measure) |
+| `assets/demo/scene_05_html.svg` | BEAT 5 | HTML code block + Hyperframes output split |
+| `assets/demo/scene_06_ui.svg` | BEAT 6 | Gallery cards with provider badges |
+| `assets/demo/scene_07_install.svg` | BEAT 7 | Install command with typing animation |
+| `assets/demo/scene_08_endcard.svg` | BEAT 8 | Logo + tagline lockup |
 
 ---
 
-## 📝 Scene-by-Scene Script
+## 📝 Scene-by-Scene Breakdown
 
-### Scene 1: HOOK (00:00–00:05)
-**Block:** `data-start="0" data-duration="5"`
+### BEAT 1: COVER CRASH (00:00–00:04)
+**Hyperframes block:** `data-start="0" data-duration="4"`
 
 **Visual:**
-- Full-screen `assetflow_cover.svg` with subtle 1.05x zoom animation
-- Cyan grid lines pulse gently
-- Terminal window on right side fades in at 00:02
+- `assets/demo/scene_01_cover.svg` — full bleed
+- Grid lines expand from center outward (scale 0→1)
+- Cyan glow pulses once
+- "UNIVERSAL ASSET ROUTER" badge slides in from left
+- "AssetFlow" title drops with a bounce
 
-**Audio (HeyGen Avatar):**
-> "What if your AI agent could generate video, trim clips, and build entire compositions — without writing a single line of timeline code?"
+**Sound design:**
+- Single deep bass hit at 00:00.000
+- High-pitched digital "ping" at 00:02.500 when badge locks
 
-**On-screen text (fade in at 00:03):**
-```
-UNIVERSAL ASSET ROUTER
-```
-
----
-
-### Scene 2: THE PROBLEM (00:05–00:12)
-**Block:** `data-start="5" data-duration="7"`
-
-**Visual:**
-- Split screen: Left = broken HTML with red error underlines, Right = confused developer face (stock or avatar)
-- Quick cuts of:
-  - `<video src="assets/intro.mp4">` with "404 NOT FOUND" stamp
-  - `data-duration="5.0"` with a warning icon
-  - FFmpeg error log scrolling
-
-**Audio (Voiceover):**
-> "Today, AI agents crash when they guess wrong paths. They hallucinate durations. They ship broken video to Hyperframes."
-
-**On-screen text (glitch effect):**
-```
-❌ Hallucinated paths
-❌ Wrong timeline math
-❌ Broken screen recordings
-```
+**No voiceover.** Text does all the talking.
 
 ---
 
-### Scene 3: THE TERMINAL (00:12–00:28)
-**Block:** `data-start="12" data-duration="16"`
+### BEAT 2: PROBLEM GLITCH (00:04–00:08)
+**Hyperframes block:** `data-start="4" data-duration="4"`
 
 **Visual:**
-- Full-screen terminal window (styled like `assetflow_cover.svg` terminal)
-- Commands type themselves out character-by-character (typing animation)
+- `assets/demo/scene_02_glitch.svg` — full bleed dark background
+- Three lines of text glitch in sequentially:
+  1. `❌ HALLUCINATED PATHS` (red, glitch effect)
+  2. `❌ WRONG TIMELINE MATH` (red, 0.3s delay)
+  3. `❌ BROKEN SCREEN RECORDINGS` (red, 0.6s delay)
+- Each line shakes horizontally for 0.1s then stabilizes
+- Background has scanline overlay
 
-**Terminal content (typing animation):**
-```bash
+**Sound design:**
+- Static/digital noise burst per glitch line
+- Subtle descending tone (like an error chime)
+
+---
+
+### BEAT 3: TERMINAL ORIGIN (00:08–00:18)
+**Hyperframes block:** `data-start="8" data-duration="10"`
+
+**Visual:**
+- `assets/demo/scene_03_terminal.svg` — terminal window centered
+- Commands type themselves out (frame-by-frame animation via SVG `<animate>`)
+- Each command followed by a ✅ checkmark that scales in
+
+**Commands typed:**
+```
 $ node scripts/list_local_assets.js
 [ "raw_demo.mp4", "loom_2024.mp4", "logo.png" ]
+✅
 
 $ node scripts/generate_avatar.js "Welcome to AssetFlow!" intro.mp4
-[AssetFlow] Generating HeyGen Avatar video...
-[AssetFlow] Video ID: abc-123-def
-[AssetFlow] Polling for completion...
-✅ SUCCESS: Avatar video saved.
-AGENT INSTRUCTION: Use <video src="assets/intro.mp4">
+[AssetFlow] Generating... Polling... Done.
+✅
 
 $ node scripts/get_media_duration.js intro.mp4
 5.23
+✅
 ```
 
-**Audio (Voiceover):**
-> "AssetFlow gives your agent real senses. It lists what exists, generates what doesn't, measures exact durations, and returns verified paths."
+**Animation pacing:**
+- Each line types at 30 chars/second
+- 0.5s pause after each ✅
+- Cyan cursor blinks at bottom when idle
 
-**Highlight effect:**
-- Cyan box around `5.23` as it appears
-- Path `assets/intro.mp4` glows when printed
+**Sound design:**
+- Keyboard clack per character (subtle, rhythmic)
+- Success chime on each ✅
 
 ---
 
-### Scene 4: FULL PIPELINE (00:28–00:38)
-**Block:** `data-start="28" data-duration="10"`
+### BEAT 4: PIPELINE MONTAGE (00:18–00:28)
+**Hyperframes block:** `data-start="18" data-duration="10"`
 
 **Visual:**
-- Fast-paced montage of terminal commands executing (1s each)
-- Each command followed by its output, stacked vertically
+- `assets/demo/scene_04_pipeline.svg` — 2×2 grid of terminal mini-windows
+- Each window executes one command, then turns green when done
+- Sequence:
+  1. **Trim** window: `smart_trim.js` → green at 00:20
+  2. **Normalize** window: `normalize_video.js` → green at 00:22
+  3. **Generate** window: `generate_ideogram.js` → green at 00:24
+  4. **Measure** window: `get_media_duration.js` → "10.00" → green at 00:26
+- At 00:27, all four windows shrink and fly toward center, merging into a single timeline diagram
 
-**Commands shown (rapid fire):**
-```bash
-$ node scripts/smart_trim.js raw_demo.mp4 00:01:30 10 feature.mp4
-✅ SUCCESS: Video trimmed perfectly.
-
-$ node scripts/normalize_video.js feature.mp4 feature_final.mp4
-✅ SUCCESS: Video normalized.
-
-$ node scripts/generate_ideogram.js "neon cyberpunk skyline" bg_1.png
-✅ SUCCESS: Image generated.
-
-$ node scripts/get_media_duration.js feature_final.mp4
-10.00
+**Timeline diagram (appears at 00:27):**
+```
+0.00s ├─→ Intro (5.23s) ─┤
+5.23s ├─→ Demo (10.00s) ─┤
+15.23s└─→ Outro (4.10s) ─┘
 ```
 
-**Audio (Voiceover):**
-> "Trim with FFmpeg. Normalize to 1080p60. Generate backgrounds with Ideogram. Every output is measured and path-verified."
-
-**Side panel (appears at 00:33):**
-```
-Timeline so far:
-├── Intro:  0.00s → 5.23s
-├── Demo:   5.23s → 15.23s
-└── Outro:  15.23s → 19.33s
-```
+**Sound design:**
+- Faster keyboard clacks (montage energy)
+- Four ascending chimes (one per window completion)
+- Whoosh sound when windows merge
 
 ---
 
-### Scene 5: HYPERFRAMES INJECTION (00:38–00:48)
-**Block:** `data-start="38" data-duration="10"`
+### BEAT 5: HTML INJECTION (00:28–00:38)
+**Hyperframes block:** `data-start="28" data-duration="10"`
 
 **Visual:**
-- Split screen: Left = HTML code block, Right = Hyperframes player rendering the video
-- Code types itself out, and as each `<div>` appears, the corresponding video segment plays on the right
+- Split screen via `assets/demo/scene_05_html.svg`
+- **Left half:** HTML code types itself out
+- **Right half:** Hyperframes player renders the video in real-time
+- As each `<div>` completes on the left, the corresponding segment plays on the right
 
-**HTML shown:**
+**HTML typed:**
 ```html
 <div data-start="0" data-duration="5.23">
-  <video src="assets/intro.mp4" autoplay muted />
+  <video src="assets/intro.mp4" />
 </div>
 <div data-start="5.23" data-duration="10.00">
-  <video src="assets/feature_final.mp4" autoplay muted />
+  <video src="assets/feature.mp4" />
 </div>
 <div data-start="15.23" data-duration="4.10">
-  <video src="assets/outro.mp4" autoplay muted />
+  <video src="assets/outro.mp4" />
 </div>
 ```
 
-**Audio (Voiceover):**
-> "Zero guesswork. Zero broken timelines. The agent wrote this HTML using real durations and verified paths from AssetFlow scripts."
+**Right half renders:**
+- 00:30 — intro avatar clip plays (5.23s)
+- 00:32 — feature demo clip plays (10.00s)
+- 00:34 — outro clip plays (4.10s)
 
-**Highlight:**
-- `data-duration="5.23"` glows cyan when the intro video plays
-- `data-duration="10.00"` glows when the demo plays
-- Seamless transition between clips on the right side
+**At 00:36:** Full-screen flash to white, then back to dark with:
+```
+ZERO GUESSWORK. ZERO BROKEN TIMELINES.
+```
+(text centered, cyan glow)
 
----
-
-### Scene 6: SHOWCASE UI (00:48–00:58)
-**Block:** `data-start="48" data-duration="10"`
-
-**Visual:**
-- Screen recording of `assetflow-ui` gallery
-- Dark-themed glassmorphism cards with provider badges (HeyGen, ElevenLabs, Ideogram)
-- Hover over a card → it lifts and glows
-- Click "Copy Agent Prompt" button → toast notification "Copied!"
-
-**Audio (Voiceover):**
-> "Browse the community showcase. Click to copy a prompt. Paste it into Claude Code. The agent executes — you don't manage files, you orchestrate agents."
-
-**Cards shown:**
-- `generate_avatar.js` — "AI Presenter" — HeyGen badge
-- `generate_elevenlabs.js` — "Premium Voice" — ElevenLabs badge
-- `generate_ideogram.js` — "Neon Background" — Ideogram badge
-- `smart_trim.js` — "Hero Moment" — FFmpeg badge
+**Sound design:**
+- Rhythmic typing on left
+- Video playback swoosh on right
+- White flash accompanied by cymbal crash / impact hit
 
 ---
 
-### Scene 7: CALL TO ACTION (00:58–01:05)
-**Block:** `data-start="58" data-duration="7"`
+### BEAT 6: SHOWCASE UI (00:38–00:45)
+**Hyperframes block:** `data-start="38" data-duration="7"`
 
 **Visual:**
-- Full-screen install command typing itself out in a terminal window
-- QR code or GitHub URL appears below
-- Subtle background: `assetflow_cover.svg` with heavy blur
+- `assets/demo/scene_06_ui.svg` — horizontal scroll of AssetFlow UI cards
+- Cards slide in from right, one every 1.5s:
+  1. 🎬 `generate_avatar.js` — HeyGen badge
+  2. 🎙 `generate_elevenlabs.js` — ElevenLabs badge
+  3. 🖼 `generate_ideogram.js` — Ideogram badge
+  4. ✂️ `smart_trim.js` — FFmpeg badge
+  5. 📊 `get_media_duration.js` — Utility badge
+- Each card has a "Copy Agent Prompt" button that flashes cyan when hovered
+- At 00:43, all cards stack into a deck, then fan out like a hand of cards
 
-**Terminal:**
+**Sound design:**
+- Card slide-in: soft "whoosh" per card
+- Hover flash: digital "tick"
+- Fan-out: shuffling sound
+
+---
+
+### BEAT 7: INSTALL COMMAND (00:45–00:52)
+**Hyperframes block:** `data-start="45" data-duration="7"`
+
+**Visual:**
+- `assets/demo/scene_07_install.svg` — full-screen terminal
+- Command types itself out slowly (character by character)
+- Background is `assetflow_cover.svg` with heavy blur + dark overlay
+
+**Typed command:**
 ```bash
 curl -sSL https://raw.githubusercontent.com/
   open-biz/assetFlow-skill/main/install.sh | bash
 ```
 
-**On-screen text:**
+**After typing completes (00:49):**
+- Output appears:
 ```
-One command. Ten seconds. Full pipeline.
+✅ Cloned assetFlow-skill
+✅ Installed dependencies
+✅ Copied .env.example → .env
+✅ FFmpeg detected
+Done in 8.3 seconds.
 ```
 
-**Audio (Voiceover):**
-> "One command installs everything. Give your AI agent the power to generate, trim, normalize, and ship. AssetFlow."
+**At 00:51:** Zoom out to reveal the command is inside a browser window showing the GitHub repo
+
+**Sound design:**
+- Deep bass pulse on first character
+- Rhythmic typing (slower, more deliberate than Beat 3)
+- Success chime sequence (4 ascending tones)
+- Final zoom-out: airy "swoosh"
 
 ---
 
-### Scene 8: END CARD (01:05–01:08)
-**Block:** `data-start="65" data-duration="3"`
+### BEAT 8: END CARD (00:52–00:55)
+**Hyperframes block:** `data-start="52" data-duration="3"`
 
 **Visual:**
-- AssetFlow logo centered
-- Cyan gradient background
-- Text fades in below
+- `assets/demo/scene_08_endcard.svg`
+- Dark background, centered logo
+- "AssetFlow" text draws itself (SVG stroke animation)
+- Below it: "Universal Asset Router for AI Video Agents"
+- GitHub URL fades in below: `github.com/open-biz/assetFlow-skill`
+- Cyan horizontal line extends from center outward (0.5s)
 
-**On-screen text:**
-```
-🌊 AssetFlow
-Universal Asset Router for AI Video Agents
-
-github.com/open-biz/assetFlow-skill
-```
-
-**Audio:**
-- Short musical sting or silence
+**Sound design:**
+- Logo draw: pencil-on-paper texture sound
+- Line extend: digital "sweep"
+- Final beat: single deep bass hit + silence
 
 ---
 
-## 🛠️ Technical Production Notes
+## 🛠️ Asset Production Guide
 
-### For HeyGen Avatar Segments
-Use `scripts/generate_avatar.js` for voiceover:
-```bash
-node scripts/generate_avatar.js "[SCRIPT_TEXT]" scene_01.mp4
-```
+### SVG Scene Assets
 
-**Recommended avatar settings:**
-- Avatar: Professional-looking, neutral background
-- Voice: Clear, confident, slightly fast-paced
-- Speed: `1.1` (to match energetic tone)
+All scenes are delivered as SVG with embedded SMIL animations (`<animate>`, `<animateTransform>`). This ensures they render natively in Hyperframes without requiring external CSS or JS.
 
-### For Terminal Screen Recordings
-Use `asciinema` or direct terminal capture:
-```bash
-# Record terminal session
-asciinema rec terminal_demo.cast
-# Convert to video with styling
-asciinema agg terminal_demo.cast terminal_demo.gif
-```
+#### Scene 01: Cover (`scene_01_cover.svg`)
+- Reuses `assetflow_cover.svg` as base
+- Adds `<animateTransform>` for grid expansion
+- Adds `<animate>` for glow pulse
 
-Or use pure CSS/JS animation in Hyperframes with `<pre>` blocks and typing animation.
+#### Scene 02: Glitch (`scene_02_glitch.svg`)
+- Text paths with `<filter>` for RGB split effect
+- `<animate>` on `dx`/`dy` for shake
+- Scanline pattern overlay
 
-### For Hyperframes Composition
-Create `demo-launch-composition.html`:
+#### Scene 03: Terminal (`scene_03_terminal.svg`)
+- Terminal chrome matching `assetflow_cover.svg`
+- Each line uses `<text>` with `<animate>` on `opacity` for typing reveal
+- Checkmarks use `<animateTransform>` for scale-in
+- Blinking cursor via `<animate>` on `opacity`
+
+#### Scene 04: Pipeline (`scene_04_pipeline.svg`)
+- Four terminal mini-windows (200×150 each)
+- Each has independent typing animation
+- Green fill transition via `<animate>` on `fill`
+- Merge animation via `<animateTransform>` on `translate`
+
+#### Scene 05: HTML Injection (`scene_05_html.svg`)
+- Split layout: 50% code, 50% player
+- Code side: syntax-highlighted HTML with typing animation
+- Player side: placeholder rectangles that "light up" in sequence
+- Flash effect: white `<rect>` with `<animate>` on `opacity`
+
+#### Scene 06: UI Gallery (`scene_06_ui.svg`)
+- Card components with rounded corners, badges, icons
+- Slide-in via `<animateTransform>` on `translateX`
+- Hover state simulated with `<animate>` on `stroke` color
+- Fan-out via `<animateTransform>` on `rotate` (around a pivot)
+
+#### Scene 07: Install (`scene_07_install.svg`)
+- Terminal window with blurred `assetflow_cover.svg` background
+- Typing animation on multi-line command
+- Checklist items with staggered reveal
+- Zoom-out simulated via `<animateTransform>` on `scale`
+
+#### Scene 08: End Card (`scene_08_endcard.svg`)
+- Text stroke animation via `<animate>` on `stroke-dashoffset`
+- Centered layout with generous whitespace
+- Cyan line with `<animate>` on `width` + `x`
+
+---
+
+## 🎵 Music & Sound Design Spec
+
+**No voiceover. Music carries the narrative.**
+
+| Timestamp | Mood | Sound |
+|---|---|---|
+| 00:00 | Impact | Deep bass hit + digital ping |
+| 00:04 | Tension | Static noise, error chimes |
+| 00:08 | Discovery | Rhythmic keyboard, curiosity |
+| 00:18 | Acceleration | Faster rhythm, ascending energy |
+| 00:28 | Climax | Full synth pad, cymbal crash |
+| 00:38 | Cool down | Shuffling, lighter rhythm |
+| 00:45 | Resolution | Slower, deliberate, confident |
+| 00:52 | Finality | Single impact, silence |
+
+**Recommended style:** Cyberpunk / lo-fi electronic / ambient techno  
+**BPM:** 128–140  
+**Source:** Generate with Udio, Suno, or license from Epidemic Sound
+
+---
+
+## 🚀 Hyperframes Composition
+
+Create `demo-composition.html` with all scenes as `<div>` blocks:
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="hyperframes.css">
+  <meta charset="UTF-8">
+  <style>
+    body { margin: 0; background: #0c1324; overflow: hidden; }
+    .scene { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .scene img, .scene svg { width: 100%; height: 100%; object-fit: cover; }
+  </style>
 </head>
 <body>
-  <!-- Scene 1: Cover -->
-  <div data-start="0" data-duration="5" class="scene-cover">
-    <img src="assets/assetflow_cover.svg" class="bg-cover zoom-slow" />
-    <div class="terminal-overlay fade-in delay-2">
-      <pre class="terminal">$ assetflow init</pre>
-    </div>
+
+  <!-- BEAT 1: Cover -->
+  <div data-start="0" data-duration="4" class="scene">
+    <img src="assets/demo/scene_01_cover.svg" />
   </div>
 
-  <!-- Scene 2: Problem -->
-  <div data-start="5" data-duration="7" class="scene-problem">
-    <div class="split-left">
-      <pre class="code-error">&lt;video src="WRONG_PATH"&gt;</pre>
-    </div>
-    <div class="split-right glitch-text">
-      404 NOT FOUND
-    </div>
+  <!-- BEAT 2: Glitch -->
+  <div data-start="4" data-duration="4" class="scene">
+    <img src="assets/demo/scene_02_glitch.svg" />
   </div>
 
-  <!-- Scene 3: Terminal Demo -->
-  <div data-start="12" data-duration="16" class="scene-terminal">
-    <div class="terminal-window">
-      <div class="terminal-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="title">assetflow — zsh</span>
-      </div>
-      <pre class="terminal-body" id="typing-scene-3"></pre>
-    </div>
+  <!-- BEAT 3: Terminal -->
+  <div data-start="8" data-duration="10" class="scene">
+    <img src="assets/demo/scene_03_terminal.svg" />
   </div>
 
-  <!-- Continue for remaining scenes... -->
+  <!-- BEAT 4: Pipeline -->
+  <div data-start="18" data-duration="10" class="scene">
+    <img src="assets/demo/scene_04_pipeline.svg" />
+  </div>
+
+  <!-- BEAT 5: HTML Injection -->
+  <div data-start="28" data-duration="10" class="scene">
+    <img src="assets/demo/scene_05_html.svg" />
+  </div>
+
+  <!-- BEAT 6: UI Gallery -->
+  <div data-start="38" data-duration="7" class="scene">
+    <img src="assets/demo/scene_06_ui.svg" />
+  </div>
+
+  <!-- BEAT 7: Install -->
+  <div data-start="45" data-duration="7" class="scene">
+    <img src="assets/demo/scene_07_install.svg" />
+  </div>
+
+  <!-- BEAT 8: End Card -->
+  <div data-start="52" data-duration="3" class="scene">
+    <img src="assets/demo/scene_08_endcard.svg" />
+  </div>
+
 </body>
 </html>
 ```
 
-### For Background Music
-- **Genre:** Lo-fi cyberpunk / ambient electronic
-- **Tempo:** 120–130 BPM
-- **Energy:** Builds during terminal scenes, drops during end card
-- **Source:** Epidemic Sound, Artlist, or generate with Udio/Suno
+---
+
+## 📂 Asset Checklist
+
+- [ ] `assets/demo/scene_01_cover.svg` — Cover with animated grid
+- [ ] `assets/demo/scene_02_glitch.svg` — Glitch text
+- [ ] `assets/demo/scene_03_terminal.svg` — Typing terminal
+- [ ] `assets/demo/scene_04_pipeline.svg` — 4-up pipeline
+- [ ] `assets/demo/scene_05_html.svg` — Code + player split
+- [ ] `assets/demo/scene_06_ui.svg` — Gallery cards
+- [ ] `assets/demo/scene_07_install.svg` — Install command
+- [ ] `assets/demo/scene_08_endcard.svg` — Logo lockup
+- [ ] `demo-composition.html` — Hyperframes composition file
+- [ ] Background music track (instrumental, 55s)
 
 ---
 
-## 📋 Shot Checklist
+## 🎯 Judging Narrative (Text-Only, No Voice)
 
-- [ ] Record `assetflow_cover.svg` as full-screen background (4K if possible)
-- [ ] Record terminal typing animations (or generate with CSS)
-- [ ] Generate HeyGen avatar voiceovers for each scene
-- [ ] Record Hyperframes player rendering the composition
-- [ ] Record `assetflow-ui` gallery interaction
-- [ ] Create glitch/overlay effects for "Problem" scene
-- [ ] Add background music and sound effects (typing, success chimes)
-- [ ] Color grade: Cyan/teal accent (#4cd7f6), dark background (#0c1324)
-- [ ] Export in 1920×1080, 60fps for Hyperframes
+The video tells this story through pure visual action:
 
----
+1. **AssetFlow exists** (logo crash)
+2. **AI agents fail today** (glitch errors)
+3. **AssetFlow fixes it** (terminal commands execute perfectly)
+4. **The whole pipeline works** (4 commands in parallel)
+5. **Hyperframes receives perfect HTML** (code → render)
+6. **Browse the community** (gallery scroll)
+7. **One command installs everything** (curl | bash)
+8. **This is the future** (logo lockup)
 
-## 🚀 Quick Start for Production
-
-```bash
-# 1. Generate all avatar voiceovers
-node scripts/generate_avatar.js "What if your AI agent could generate video..." scene01.mp4
-node scripts/generate_avatar.js "Today, AI agents crash when they guess wrong paths..." scene02.mp4
-node scripts/generate_avatar.js "AssetFlow gives your agent real senses..." scene03.mp4
-node scripts/generate_avatar.js "Trim with FFmpeg. Normalize to 1080p60..." scene04.mp4
-node scripts/generate_avatar.js "Zero guesswork. Zero broken timelines..." scene05.mp4
-node scripts/generate_avatar.js "Browse the community showcase..." scene06.mp4
-node scripts/generate_avatar.js "One command installs everything..." scene07.mp4
-
-# 2. Get durations for timeline math
-node scripts/get_media_duration.js scene01.mp4
-node scripts/get_media_duration.js scene02.mp4
-# ... etc
-
-# 3. Assemble in Hyperframes with exact durations
-# Use the duration values to set data-duration attributes
-```
+No avatar needed. The terminal is the protagonist.
 
 ---
 
-## 🎯 Key Message for Judges
-
-> **"AssetFlow isn't a video editor. It's a sensory system for AI agents. We turned the biggest pain point in programmatic video — asset management — into a one-command, zero-hallucination pipeline. The agent sees, generates, measures, and ships. You just describe what you want."**
-
----
-
-*Generated for the HeyGen Hackathon — Product Track*  
-*Repo: github.com/open-biz/assetFlow-skill*
+*Pure action. Pure SVG. Pure Hyperframes.*  
+*github.com/open-biz/assetFlow-skill*

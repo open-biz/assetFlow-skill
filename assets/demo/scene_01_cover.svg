@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1a2744" stroke-width="1" opacity="0.6"/>
+    </pattern>
+    <radialGradient id="cyan-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#0c1324" stop-opacity="0" />
+    </radialGradient>
+    <filter id="blur-bg">
+      <feGaussianBlur stdDeviation="2" />
+    </filter>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="100%" height="100%" fill="#0c1324" />
+
+  <!-- Animated Grid -->
+  <rect width="100%" height="100%" fill="url(#grid)">
+    <animateTransform attributeName="transform" type="scale" from="0.8 0.8" to="1 1" begin="0s" dur="2s" fill="freeze" calcMode="easeOut"/>
+    <animate attributeName="opacity" from="0" to="1" begin="0s" dur="1s" fill="freeze"/>
+  </rect>
+
+  <!-- Ambient Glow -->
+  <rect width="100%" height="100%" fill="url(#cyan-glow)">
+    <animate attributeName="opacity" values="0;1;0.5;1" dur="3s" repeatCount="indefinite" />
+  </rect>
+
+  <!-- Badge -->
+  <g transform="translate(960, 380)" text-anchor="middle">
+    <rect x="-180" y="-20" width="360" height="40" rx="20" fill="#151b2d" stroke="#3d494c" stroke-width="1">
+      <animate attributeName="opacity" from="0" to="1" begin="0.8s" dur="0.5s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" from="-200 0" to="0 0" begin="0.8s" dur="0.5s" fill="freeze" calcMode="easeOut"/>
+    </rect>
+    <text x="0" y="7" fill="#4cd7f6" font-family="ui-monospace, monospace" font-size="16" font-weight="600" letter-spacing="0.08em">
+      <animate attributeName="opacity" from="0" to="1" begin="1s" dur="0.4s" fill="freeze"/>
+      UNIVERSAL ASSET ROUTER
+    </text>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(960, 520)" text-anchor="middle">
+    <text x="0" y="0" fill="#4cd7f6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="140" font-weight="800" letter-spacing="-0.03em">
+      <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.6s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" from="0 30" to="0 0" begin="1.2s" dur="0.6s" fill="freeze" calcMode="easeOut"/>
+      AssetFlow
+    </text>
+  </g>
+
+  <!-- Subtitle -->
+  <g transform="translate(960, 600)" text-anchor="middle">
+    <text x="0" y="0" fill="#8a9aa8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="500">
+      <animate attributeName="opacity" from="0" to="1" begin="1.8s" dur="0.6s" fill="freeze"/>
+      The Terminal Is The Protagonist
+    </text>
+  </g>
+
+  <!-- Bottom Tags -->
+  <g transform="translate(960, 680)" text-anchor="middle">
+    <g opacity="0">
+      <rect x="-140" y="-14" width="80" height="28" rx="4" fill="#191f31" stroke="#3d494c" stroke-width="1" />
+      <text x="-100" y="7" fill="#8a9aa8" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">VIDEO</text>
+      <rect x="-40" y="-14" width="80" height="28" rx="4" fill="#191f31" stroke="#3d494c" stroke-width="1" />
+      <text x="0" y="7" fill="#8a9aa8" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">AUDIO</text>
+      <rect x="60" y="-14" width="80" height="28" rx="4" fill="#191f31" stroke="#3d494c" stroke-width="1" />
+      <text x="100" y="7" fill="#8a9aa8" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">IMAGES</text>
+      <animate attributeName="opacity" from="0" to="1" begin="2.2s" dur="0.5s" fill="freeze"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AssetFlow — Launch Demo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0c1324;
+      color: #dce1fb;
+      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+      overflow: hidden;
+      width: 1920px;
+      height: 1080px;
+    }
+    .scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1920px;
+      height: 1080px;
+      display: none;
+    }
+    .scene.active {
+      display: block;
+    }
+    .scene img, .scene svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Hyperframes native data attributes for programmatic control */
+  </style>
+</head>
+<body>
+
+  <!-- BEAT 1: Cover (0s - 4s) -->
+  <div data-start="0" data-duration="4" class="scene" id="scene-01">
+    <img src="assets/demo/scene_01_cover.svg" alt="AssetFlow Cover" />
+  </div>
+
+  <!-- BEAT 2: Glitch (4s - 8s) -->
+  <div data-start="4" data-duration="4" class="scene" id="scene-02">
+    <img src="assets/demo/scene_02_glitch.svg" alt="Problem Statement" />
+  </div>
+
+  <!-- BEAT 3: Terminal (8s - 18s) -->
+  <div data-start="8" data-duration="10" class="scene" id="scene-03">
+    <img src="assets/demo/scene_03_terminal.svg" alt="Terminal Demo" />
+  </div>
+
+  <!-- BEAT 4: Pipeline (18s - 28s) -->
+  <div data-start="18" data-duration="10" class="scene" id="scene-04">
+    <img src="assets/demo/scene_04_pipeline.svg" alt="Pipeline Montage" />
+  </div>
+
+  <!-- BEAT 5: HTML Injection (28s - 38s) -->
+  <div data-start="28" data-duration="10" class="scene" id="scene-05">
+    <img src="assets/demo/scene_05_html.svg" alt="HTML Injection" />
+  </div>
+
+  <!-- BEAT 6: UI Gallery (38s - 45s) -->
+  <div data-start="38" data-duration="7" class="scene" id="scene-06">
+    <img src="assets/demo/scene_06_ui.svg" alt="Community Showcase" />
+  </div>
+
+  <!-- BEAT 7: Install (45s - 52s) -->
+  <div data-start="45" data-duration="7" class="scene" id="scene-07">
+    <img src="assets/demo/scene_07_install.svg" alt="Install Command" />
+  </div>
+
+  <!-- BEAT 8: End Card (52s - 55s) -->
+  <div data-start="52" data-duration="3" class="scene" id="scene-08">
+    <img src="assets/demo/scene_08_endcard.svg" alt="End Card" />
+  </div>
+
+  <script>
+    // Simple scene controller for standalone playback
+    // Hyperframes will manage this natively via data-start/data-duration
+    const scenes = document.querySelectorAll('.scene');
+    const startTime = Date.now();
+
+    function updateScenes() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      scenes.forEach(scene => {
+        const start = parseFloat(scene.dataset.start);
+        const duration = parseFloat(scene.dataset.duration);
+        const end = start + duration;
+        if (elapsed >= start && elapsed < end) {
+          scene.classList.add('active');
+        } else {
+          scene.classList.remove('active');
+        }
+      });
+      requestAnimationFrame(updateScenes);
+    }
+
+    // Start playback when page loads
+    window.addEventListener('load', updateScenes);
+  </script>
+
+</body>
+</html>
