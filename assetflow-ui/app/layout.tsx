@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "AssetFlow — AI Agent Media Showcase",
   description:
-    "The Universal Media Router for AI Video Agents. Discover, preview, and copy Agent prompts for HeyGen, ElevenLabs, and Ideogram assets.",
+    "The Universal Media Router for AI Video Agents. Discover, preview, and deploy AI-generated assets directly into your Hyperframes workflow.",
 };
 
 export default function RootLayout({
@@ -14,7 +14,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased min-h-screen">{children}</body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="antialiased min-h-screen font-body">{children}</body>
     </html>
   );
 }
