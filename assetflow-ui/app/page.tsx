@@ -138,7 +138,7 @@ export default function Home() {
             {/* Badge */}
             <div className="animate-slide-up opacity-0 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/5 text-cyan-400 text-sm font-medium border border-cyan-500/15 hover:border-cyan-500/30 transition-colors cursor-default">
               <Sparkles className="w-4 h-4" />
-              <span>HeyGen Hackathon — Product Track Winner</span>
+              <span>HeyGen Hackathon — Product Track</span>
             </div>
 
             {/* Title */}
