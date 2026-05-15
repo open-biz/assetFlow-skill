@@ -26,23 +26,32 @@ AssetFlow gives AI agents (like Cursor, Claude Code, Claude Design or OpenDesign
 
 ---
 
-## 📦 Installation
+## 📦 One-Liner Install
 
 ```bash
-# Clone or create the project directory
-cd assetflow-skill
-
-# Install dependencies
-npm install
-
-# Copy environment template
-cp .env.example .env
-# Then edit .env with your actual API keys
+curl -sSL https://raw.githubusercontent.com/open-biz/assetFlow-skill/main/install.sh | bash
 ```
+
+Or install into a custom directory:
+```bash
+curl -sSL https://raw.githubusercontent.com/open-biz/assetFlow-skill/main/install.sh | bash -s -- my-project
+```
+
+**What it does:** clones the repo, installs dependencies, copies `.env.example` → `.env`, and checks for FFmpeg.
 
 **Prerequisites:**
 - [Node.js](https://nodejs.org/) installed
 - [FFmpeg](https://ffmpeg.org/download.html) installed (`ffmpeg` and `ffprobe` must be in your PATH)
+
+### Manual Install (if you prefer)
+
+```bash
+git clone https://github.com/open-biz/assetFlow-skill.git
+cd assetflow-skill
+npm install
+cp .env.example .env
+# Then edit .env with your actual API keys
+```
 
 ---
 
