@@ -1,0 +1,23 @@
+{
+  "name": "assetflow-skill",
+  "version": "1.0.0",
+  "description": "Autonomous media orchestrator and Agent Skill for HeyGen Hyperframes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Run individual scripts via node scripts/<script>.js\""
+  },
+  "keywords": [
+    "hyperframes",
+    "heygen",
+    "assetflow",
+    "ai-agent",
+    "video",
+    "ffmpeg"
+  ],
+  "author": "AssetFlow Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5"
+  }
+}
