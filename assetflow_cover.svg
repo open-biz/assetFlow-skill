@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#191f31" stroke-width="1" opacity="0.5"/>
+    </pattern>
+
+    <!-- Cyan Glow -->
+    <radialGradient id="cyan-glow" cx="70%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0c1324" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glassmorphism Shadow/Blur effect for Terminal -->
+    <filter id="glass-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Outer Glow for Terminal -->
+    <filter id="cyan-outer-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#4cd7f6" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="100%" height="100%" fill="#0c1324" />
+  
+  <!-- Grid overlay -->
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <!-- Ambient Glow -->
+  <rect width="100%" height="100%" fill="url(#cyan-glow)" />
+
+  <!-- LEFT SIDE: Text Content -->
+  <g transform="translate(100, 150)">
+    
+    <!-- Top Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="260" height="32" rx="16" fill="#151b2d" stroke="#3d494c" stroke-width="1" />
+      <path d="M 22 16 L 16 20 L 16 12 Z" fill="#4cd7f6" />
+      <circle cx="12" cy="16" r="3" fill="#4cd7f6" />
+      <text x="36" y="21" fill="#4cd7f6" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="13" font-weight="500" letter-spacing="0.05em">UNIVERSAL ASSET ROUTER</text>
+    </g>
+
+    <!-- Main Title (Baseline shifted down accurately) -->
+    <text x="0" y="120" fill="#4cd7f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="88" letter-spacing="-0.02em">AssetFlow</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="180" fill="#dce1fb" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="500">
+      Give your AI Agents the native
+    </text>
+    <text x="0" y="220" fill="#dce1fb" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="500">
+      ability to generate, trim, and
+    </text>
+    <text x="0" y="260" fill="#dce1fb" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="500">
+      inject assets.
+    </text>
+
+    <!-- Bottom details / tags -->
+    <g transform="translate(0, 310)">
+      <rect x="0" y="0" width="80" height="28" rx="4" fill="#191f31" stroke="#3d494c" stroke-width="1" />
+      <text x="40" y="18" fill="#bcc9cd" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="12" text-anchor="middle">VIDEO</text>
+
+      <rect x="92" y="0" width="80" height="28" rx="4" fill="#191f31" stroke="#3d494c" stroke-width="1" />
+      <text x="132" y="18" fill="#bcc9cd" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="12" text-anchor="middle">AUDIO</text>
+
+      <rect x="184" y="0" width="80" height="28" rx="4" fill="#191f31" stroke="#3d494c" stroke-width="1" />
+      <text x="224" y="18" fill="#bcc9cd" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="12" text-anchor="middle">IMAGES</text>
+    </g>
+  </g>
+
+  <!-- RIGHT SIDE: Terminal Window Graphic -->
+  <g transform="translate(620, 140)" filter="url(#glass-shadow)">
+    
+    <!-- Outer Glow Box -->
+    <rect width="600" height="380" rx="12" fill="none" filter="url(#cyan-outer-glow)" />
+
+    <!-- Terminal Background (Glassmorphism effect) -->
+    <rect width="600" height="380" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#3d494c" stroke-width="1.5" />
+    
+    <!-- Terminal Header -->
+    <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 588 0 C 594.627 0 600 5.373 600 12 L 600 48 L 0 48 L 0 12 Z" fill="#151b2d" />
+    <line x1="0" y1="48" x2="600" y2="48" stroke="#3d494c" stroke-width="1" />
+    
+    <!-- Mac Window Controls -->
+    <circle cx="24" cy="24" r="6" fill="#ffb4ab" />
+    <circle cx="44" cy="24" r="6" fill="#e1e0ff" />
+    <circle cx="64" cy="24" r="6" fill="#4edea3" />
+    
+    <!-- Header Text -->
+    <text x="300" y="28" fill="#869397" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" text-anchor="middle" font-weight="500">
+      &gt;_ assetflow-agent — zsh
+    </text>
+
+    <!-- Terminal Content (Code block) -->
+    <g transform="translate(32, 90)" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14">
+      
+      <!-- Line 1 -->
+      <text x="0" y="0" fill="#4cd7f6">$ </text>
+      <text x="16" y="0" fill="#dce1fb">node scripts/generate_avatar.js intro</text>
+      
+      <!-- Line 2 -->
+      <text x="0" y="28" fill="#869397">[AssetFlow] Intercepting agent request...</text>
+      
+      <!-- Line 3 -->
+      <text x="0" y="56" fill="#869397">[AssetFlow] Routing to HeyGen API (Provider 1/4)</text>
+      
+      <!-- Line 4 -->
+      <rect x="0" y="74" width="16" height="16" rx="2" fill="#4edea3" />
+      <path d="M 4 84 L 7 87 L 12 79" fill="none" stroke="#003824" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="24" y="86" fill="#4edea3">SUCCESS: Avatar video generated.</text>
+      
+      <!-- Line 5 -->
+      <text x="0" y="114" fill="#869397">ASSET PATH: </text>
+      <text x="95" y="114" fill="#c0c1ff">./assets/intro_final.mp4</text>
+      
+      <!-- Line 6 -->
+      <text x="0" y="142" fill="#3d494c">--------------------------------------------------</text>
+
+      <!-- Line 7 -->
+      <text x="0" y="174" fill="#4cd7f6">$ </text>
+      <text x="16" y="174" fill="#dce1fb">node scripts/smart_trim.js intro_final.mp4 5</text>
+
+      <!-- Line 8 -->
+      <rect x="0" y="192" width="16" height="16" rx="2" fill="#4edea3" />
+      <path d="M 4 202 L 7 205 L 12 197" fill="none" stroke="#003824" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="24" y="204" fill="#4edea3">SUCCESS: Video trimmed perfectly.</text>
+
+      <!-- Line 9 -->
+      <text x="0" y="236" fill="#869397">AGENT INSTRUCTION: </text>
+      <text x="145" y="236" fill="#bcc9cd">Ready for Hyperframes injection.</text>
+
+      <!-- Blinking Cursor -->
+      <rect x="0" y="260" width="10" height="16" fill="#4cd7f6">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+      </rect>
+
+    </g>
+  </g>
+
+</svg>

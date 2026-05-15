@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/open-biz/assetFlow-skill/main/assetflow_cover.svg" alt="AssetFlow Cover" width="100%" />
+</p>
+
 # 🌊 AssetFlow
 
 > **Autonomous Asset Orchestrator for HeyGen Hyperframes**
