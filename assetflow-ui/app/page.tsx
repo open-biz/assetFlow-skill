@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Sparkles, Layers, Terminal, ArrowRight, Search } from "lucide-react";
+import { Sparkles, Layers, Terminal, ArrowRight, Search, Copy, Check } from "lucide-react";
 import { assets } from "@/lib/assets";
 import AssetCard from "@/components/AssetCard";
 
@@ -12,6 +12,19 @@ type Provider = (typeof providers)[number];
 export default function Home() {
   const [activeProvider, setActiveProvider] = useState<Provider>("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const [installCopied, setInstallCopied] = useState(false);
+
+  const installCommand = "curl -sSL https://raw.githubusercontent.com/open-biz/assetFlow-skill/main/install.sh | bash";
+
+  const handleCopyInstall = async () => {
+    try {
+      await navigator.clipboard.writeText(installCommand);
+      setInstallCopied(true);
+      setTimeout(() => setInstallCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
 
   const filtered = assets.filter((a) => {
     const matchProvider =
@@ -42,22 +55,53 @@ export default function Home() {
               The <span className="text-accent font-semibold">Universal Media Router</span> for AI Video Agents.
               Discover, preview, and deploy AI-generated assets directly into your Hyperframes workflow.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
+            {/* Install One-Liner */}
+            <div className="w-full max-w-2xl mx-auto mt-6">
+              <div className="relative group">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-accent/30 via-accent/10 to-accent/30 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-500" />
+                <div className="relative flex items-center gap-3 px-5 py-4 rounded-xl bg-[#0d1321] border border-slate-700/80 font-mono text-sm text-slate-300 shadow-2xl">
+                  <span className="text-slate-500 select-none">$</span>
+                  <code className="flex-1 overflow-x-auto whitespace-nowrap scrollbar-hide text-slate-200">
+                    {installCommand}
+                  </code>
+                  <button
+                    onClick={handleCopyInstall}
+                    className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-slate-800 hover:bg-slate-700 text-xs font-medium text-slate-400 hover:text-white transition-all duration-200 border border-slate-700 hover:border-slate-600"
+                  >
+                    {installCopied ? (
+                      <>
+                        <Check className="w-3.5 h-3.5 text-emerald-400" />
+                        <span className="text-emerald-400">Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3.5 h-3.5" />
+                        <span>Copy</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+              <p className="text-xs text-slate-500 mt-2 text-center">
+                One command. Clones, installs dependencies, and scaffolds your project.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
               <a
                 href="#gallery"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-accent-glow transition-all duration-200 shadow-lg shadow-accent/20 hover:shadow-accent/40 active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium hover:bg-slate-700 hover:text-white transition-all duration-200 border border-slate-700"
               >
-                <Layers className="w-5 h-5" />
+                <Layers className="w-4 h-4" />
                 Browse Assets
-                <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/open-biz/assetFlow-skill"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-700 text-slate-300 font-semibold hover:border-slate-500 hover:text-white transition-all duration-200"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-700 text-slate-300 text-sm font-medium hover:border-slate-500 hover:text-white transition-all duration-200"
               >
-                <Terminal className="w-5 h-5" />
+                <Terminal className="w-4 h-4" />
                 View on GitHub
               </a>
             </div>
