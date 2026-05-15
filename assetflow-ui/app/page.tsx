@@ -148,7 +148,7 @@ export default function Home() {
 
             {/* Subtitle */}
             <p className="animate-slide-up opacity-0 delay-200 text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl">
-              The <span className="text-cyan-400 font-semibold">Universal Media Router</span> for AI Video Agents. Give Cursor, Claude Code, and OpenDesign the native ability to generate, trim, normalize, and inject assets into Hyperframes — with zero hallucination.
+              The <span className="text-cyan-400 font-semibold">Universal Asset Router</span> for AI Video Agents. Give Cursor, Claude Code, and OpenDesign the native ability to generate, trim, normalize, and inject assets into Hyperframes — with zero hallucination.
             </p>
 
             {/* Install Block */}

@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "AssetFlow — AI Agent Media Showcase",
   description:
-    "The Universal Media Router for AI Video Agents. Discover, preview, and deploy AI-generated assets directly into your Hyperframes workflow.",
+    "The Universal Asset Router for AI Video Agents. Discover, preview, and deploy AI-generated assets directly into your Hyperframes workflow.",
 };
 
 export default function RootLayout({
